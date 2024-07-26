@@ -17,13 +17,13 @@ Just followed the documentation for quickstart. It also helped me install KubeVi
 #### Check the deployment
 
 ```bash
-kubectl get kubevirt.kubevirt.io/kubevirt -n kubevirt -o=jsonpath="{.status.phase}"<br>
+kubectl get kubevirt.kubevirt.io/kubevirt -n kubevirt -o=jsonpath="{.status.phase}
 ```
 
 #### Check all the components in the KubeVirt namespace
 
 ```bash
-kubectl get all -n kubevirt <br>
+kubectl get all -n kubevirt
 ```
 
 #### To safely remove a KubeVirt deployment
@@ -57,26 +57,26 @@ Prerequisite: Quick-Start instructions
 #### Apply `vm.yaml`
 
 ```bash
-kubectl apply -f vm.yaml <br>
+kubectl apply -f vm.yaml
 ```
 
 #### Start the Virtual Machine
 
 ```bash
-virtctl start testvm <br>
+virtctl start testvm
 ```
 
 #### Check the status
 
 ```bash
-kubectl get vmis <br>
-kubectl get vmis -o yaml testvm <br>
+kubectl get vmis
+kubectl get vmis -o yaml testvm
 ```
 
 #### Playing with the VMs (disconnect by typing `ctrl+]`): 
 
 ```bash
-virtctl console testvm <br>
+virtctl console testvm
 ```
 
 Login: cirros \
@@ -86,6 +86,6 @@ Password (root): sudo
 #### Stop and delete the Virtual Machine
 
 ```bash
-virtctl stop testvm <br>
-kubectl delete vm testvm <br>
+virtctl stop testvm
+kubectl delete vm testvm
 ```
