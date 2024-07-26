@@ -5,6 +5,11 @@ Made a simple Kubernetes cluster with WebApp and MongoDB pods which can be deplo
 - Kubernetes (+ Kubectl)
 - Minikube
 
+### What is happening
+A local Kubernetes cluster is created by Minikube by creating a VirtualBox (or some other hypervisor). The node will run in that VirtualBox. We can communicate with this cluster using the kubectl CLI, as kubectl communicates with the Kubernetes API server (you could also interact with the API through the Kubernetes API or UI). kubectl can create and delete pods, services, etc.
+
+Minikube is primarily used to test on a local machine (local deployment) and simplifies testing because we wouldn't want to test in a production environment (which has a lot of industry requirements). In fact, when we want to set up a production cluster, there would be multiple master and worker nodes, each given a separate virtual or physical machine. This is different from Minikube, where the master and worker nodes run on one machine with a Docker runtime pre-installed, making it easier on our local computer to run.
+
 ### How to use
 **NOTE**: Do **not** delete or stop minikube as a docker container. \
 **NOTE:** The Kubectl CLI is for configuring the Minikube cluster AND Minikube CLI is for starting up and deleting the cluster.
